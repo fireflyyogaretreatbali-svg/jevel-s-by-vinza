@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0a0b;
+  --ink: #f6f3ec;
+  --gold: #d4af37;
+  --gold-light: #f1d48c;
+  --gold-deep: #8a6a1f;
+  --line: rgba(212, 175, 55, 0.14);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+}
+
+.gold-text {
+  background: linear-gradient(
+    90deg,
+    var(--gold-deep),
+    var(--gold-light),
+    var(--gold-deep)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.light {
+  --bg: #f6f3ec;
+  --ink: #0a0a0b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
